@@ -9,7 +9,6 @@ namespace HTTPswagerTEST
 	{
 		public void ConfigureService(IServiceCollection services)
 		{
-			//services.AddDbContext<ToBuyItemsContext>(opt => opt.UseInMemoryDatabase("ToBuyItems"));
 			services.AddControllers();
 			services.AddSwaggerGen();
 
