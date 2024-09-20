@@ -1,0 +1,14 @@
+@HTTPswagerTEST_HostAddress = http://localhost:5108
+
+
+
+GET {{HTTPswagerTEST_HostAddress}}/ToBuyItems/
+Accept: application/json
+
+###
+
+DELETE {{HTTPswagerTEST_HostAddress}}/ToBuyItems/{id}
+Accept: application/json
+
+###
+
