@@ -23,15 +23,12 @@ namespace HTTPswagerTEST
 					options.UseInMemoryDatabase("ToBuyItemss"));
 
 
-			
-
 			builder.Services.AddSwaggerGen(options =>
 			{
 				options.SwaggerDoc("v1", new OpenApiInfo
 				{
 					Title = "Список покупок",
 					Description = "Простой список покупок с возможностью добавлять товар, изменять его количество, менять статус ну и с функцией удаления записи",
-
 				});
 
 				var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -40,7 +37,6 @@ namespace HTTPswagerTEST
 
 			var app = builder.Build();
 
-			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())
 			{
 				app.UseSwagger();
@@ -59,12 +55,5 @@ namespace HTTPswagerTEST
 
 			app.Run();
 		}
-
-	//	public static IHostBuilder CreateHostBuilder(string[] args) =>
-	//Host.CreateDefaultBuilder(args)
-	//	.ConfigureWebHostDefaults(webBuilder =>
-	//	{
-	//		webBuilder.UseStartup<Startup>();
-	//	});
 	}
 }
